@@ -1,0 +1,13 @@
+^LICENSE\.md$
+^doc$
+^Meta$
+.lintr
+^README\.md$
+.gitignore
+^codecov\.yml$
+^cran-comments\.md$
+^CRAN-RELEASE$
+^\.github$
+^CRAN-SUBMISSION$
+^.*\.Rproj$
+^\.Rproj\.user$
