@@ -1,3 +1,5 @@
+# This version just changed the apply / tapply calls using collapse::fsum
+
 #' Standard Errors with adjusted degrees of freedom
 #' @param model Fitted model returned by the \code{lm} function
 #' @param clustervar Factor variable that defines clusters. If \code{NULL} (or
