@@ -9,8 +9,6 @@ the `tapply(x, clustervariable, sum)` and `apply(some_matrix,2,tapply(x,clusterv
 
 Speed gains seem largest if there are many x variables. That is because the call to `df0` inside the code loops through all `x` variables and `collapse::fsum` substantially speeds up `df0`.
 
-Since it looks as if currently only `lm` is supported and not yet direct fixed effects models like `feols` from `fixest` the number of x variables may indeed be large in applications that use dummy encoding for fixed effects. 
-
 In the following example with many x, the modification yields roughly a 10x speed-up.
 
 ```r
