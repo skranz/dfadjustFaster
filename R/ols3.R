@@ -147,7 +147,7 @@ dfadjustSE <- function(model, clustervar=NULL, ell=NULL,for_coefs=NULL, IK=TRUE,
             # A: transpose of symmetric root of generalized inverse of I_QQ
             I_QQ = diag(n_s)-tcrossprod(Qs)
             e <- eigen(I_QQ, symmetric=TRUE)
-            A = (e$vec %*% (t(e$vec)*sqrt(1/pmax(e$values, tol))))
+            A = (e$values >= tol) *(e$vec %*% (t(e$vec)*sqrt(1/pmax(e$values, tol))))
             AQ = crossprod(A, Qs)
           } else {
             stop(paste0("Unknown inv_mode = ", inv_mode))
